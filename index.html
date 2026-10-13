@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#0b0d2a" />
+    <meta name="description" content="星跃浮岛——一款单指蓄力跳跃的手机挑战游戏。" />
+    <title>星跃浮岛</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="game" aria-label="星跃浮岛游戏区">
+      <canvas id="canvas" aria-hidden="true"></canvas>
+
+      <header class="hud" aria-live="polite">
+        <div class="brand">
+          <span class="brand-star">✦</span>
+          <span>星跃浮岛</span>
+        </div>
+        <div class="score-wrap">
+          <span class="score-label">本局</span>
+          <strong id="score">0</strong>
+        </div>
+      </header>
+
+      <div id="hint" class="hint">
+        <span class="touch-icon" aria-hidden="true"></span>
+        <span>按住蓄力，松开跳跃</span>
+      </div>
+
+      <section id="result" class="result" aria-labelledby="result-title" hidden>
+        <div class="result-card">
+          <div class="result-star" aria-hidden="true">✦</div>
+          <p class="eyebrow">旅程结束</p>
+          <h1 id="result-title">本局得分</h1>
+          <p id="final-score" class="final-score">0</p>
+          <button id="restart" type="button">再来一局</button>
+        </div>
+      </section>
+
+      <div class="power-panel" aria-hidden="true">
+        <div class="power-copy">
+          <span>蓄力</span>
+          <span id="power-state">准备</span>
+        </div>
+        <div class="power-track">
+          <div id="power-fill" class="power-fill"></div>
+          <i></i><i></i><i></i>
+        </div>
+      </div>
+    </main>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
